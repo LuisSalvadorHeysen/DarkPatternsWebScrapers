@@ -4,7 +4,7 @@ This repository provides two Python-based web scrapers for collecting BibTeX ent
 
 ## Features
 
-- **Google Scholar Scraper**: Uses Selenium to interact with Google Scholar, click through citation options, and download BibTeX entries for each paper.
+- **Google Scholar Scraper**: Uses Selenium to interact with Google Scholar, click through citation options, and download BibTeX entries for each paper. Delay can't be too high because it will get flagged as a bot and prompt the captcha/be completely blocked.
 - **arXiv Scraper**: Uses `requests` and `BeautifulSoup` to fetch and parse arXiv search results, then retrieves BibTeX entries using the [arxiv2bib](https://github.com/nathangrigg/arxiv2bib) command-line tool.
 
 ## Requirements
@@ -16,9 +16,3 @@ This repository provides two Python-based web scrapers for collecting BibTeX ent
   - `beautifulsoup4`
 - **arXiv2bib**: Install via `pip install arxiv2bib` (or clone the GitHub repo and ensure the `arxiv2bib` command is in your PATH).
 - **ChromeDriver**: Required for Selenium to control Google Chrome (download from [ChromeDriver Downloads](https://chromedriver.chromium.org/downloads)).
-
-## Usage
-
-### Google Scholar Scraper
-
-1. **Install dependencies**:
